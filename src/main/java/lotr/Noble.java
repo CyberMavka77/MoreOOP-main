@@ -12,8 +12,8 @@ public class Noble extends Character{
             this.setPower(5);
         }
     }
-    public Noble(int[] hp, int[] power){
-        super(new Random().nextInt(hp[1]) + hp[0], new Random().nextInt(power[1]) + power[0]);
+    public Noble(int hp_min, int hp_max, int power_min, int power_max){
+        super((new Random().nextInt(hp_max - hp_min + 1) + hp_min), (new Random().nextInt(power_max - power_min + 1) + power_min));
     }
 
     @Override
